@@ -57,9 +57,9 @@ create table if not exists Line (
 );
 
 insert into Line values
-(‘763-503-2695',1567952467,43,2,‘MADDIE'),
-(‘763-503-2695',1567952467,43,1,‘COOPER'),
-(‘763-503-2695',1567952467,43,3,‘DAD');
+('763-503-2695',1567952467,43,2,'MADDIE'),
+('763-503-2695',1567952467,43,1,'COOPER'),
+('763-503-2695',1567952467,43,3,'DAD');
 
 create table if not exists Frame(
 	LineAlleyPhoneNum varchar(12),
