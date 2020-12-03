@@ -23,8 +23,7 @@ set search_path to 'bowling';
 create table if not exists Alley (
 	PhoneNum varchar(12) not null,
 	Name varchar(100) not null,
-	constraint pk_Alley primary key (PhoneNum),
-);
+	constraint pk_Alley primary key (PhoneNum));
 
 --Using this form of the insert statement we can create
 -- multiple rows at once.  We have already specified our
@@ -34,7 +33,7 @@ insert into Alley values
 ('763-503-2695','BrunswickZoneBrooklynPark');
 
 
-/*create table if not exists Game (
+create table if not exists Game (
 	AlleyPhoneNum varchar(12),
 	Time double ,
 	Lanenum int,
@@ -71,9 +70,9 @@ create table if not exists Frame(
 	Roll2score int,
 	Roll3score int,
 	isSplit bool,
-	constraint ck_roll3score check ((Roll3score is null AND FrameNum <> 10)OR(Roll3score is not null AND FrameNum=10)),
+	/*constraint ck_roll3score check ((Roll3score is null AND FrameNum <> 10)OR(Roll3score is not null AND FrameNum=10)),
 	constraint ck_roll2score check ((Roll2score is null AND Roll1score=10 AND FrameNum<>10)OR (Roll2score is not null AND Roll1score =10 AND FrameNum=10)OR (Roll2score is not null AND Roll1score <>10 AND FrameNum<>10)OR(Roll2score is not null AND Roll1score <>10 AND FrameNum=10)),
-	constraint pk_Frame primary key (LineAlleyPhoneNum,LineGameTime,LineGameLaneNum,LinePlayernum,FrameNum),
+	*/constraint pk_Frame primary key (LineAlleyPhoneNum,LineGameTime,LineGameLaneNum,LinePlayernum,FrameNum),
 	constraint fk_Frame foreign key (LineAlleyPhoneNum,LineGameTime,LineGameLaneNum,LinePlayernum) references Line(GameAlleyPhonenum,GameTime,GameLaneNum,PlayerNum)
 );
 
