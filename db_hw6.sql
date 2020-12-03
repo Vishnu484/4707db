@@ -89,7 +89,7 @@ select * from Alley;
 select * from Game;
 select * from Line;
 select * from Frame;
-
+*/
 /*drop schema if exists menus cascade;
 
 create schema if not exists menus;
