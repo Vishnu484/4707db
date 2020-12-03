@@ -90,7 +90,7 @@ select * from Game;
 select * from Line;
 select * from Frame;
 
-drop schema if exists menus cascade;
+/*drop schema if exists menus cascade;
 
 create schema if not exists menus;
 
@@ -216,4 +216,4 @@ select * from Upgrade;
 select * from DishPrice;
 select * from Special;
 select * from CategoryUpgrade;
-select * from DishUpgrade;
+select * from DishUpgrade;*/
