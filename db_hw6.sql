@@ -35,7 +35,7 @@ insert into Alley values
 
 create table if not exists Game (
 	AlleyPhoneNum varchar(12),
-	Time double ,
+	Time int ,
 	Lanenum int,
 	constraint pk_Game primary key (AlleyPhoneNum,Time,Lanenum),
 	constraint fk_Game foreign key (AlleyPhoneNum) references state(PhoneNum)
@@ -45,7 +45,7 @@ insert into Game values
 ('763-503-2695',1567952467,43);
 
 
-/*create table if not exists Line (
+create table if not exists Line (
 	GameAlleyPhonenum varchar(12) ,
 	GameTime int,
 	GameLaneNum int,
@@ -88,7 +88,7 @@ select * from Alley;
 select * from Game;
 select * from Line;
 select * from Frame;
-*/
+
 /*drop schema if exists menus cascade;
 
 create schema if not exists menus;
