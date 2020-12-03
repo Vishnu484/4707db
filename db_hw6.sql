@@ -34,7 +34,7 @@ insert into Alley values
 ('763-503-2695','BrunswickZoneBrooklynPark');
 
 
-create table if not exists Game (
+/*create table if not exists Game (
 	AlleyPhoneNum varchar(12),
 	Time double ,
 	Lanenum int,
